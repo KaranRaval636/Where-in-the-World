@@ -17,9 +17,7 @@
 
 ## 🛠️ Technologies Used
 - HTML, CSS, and JavaScript
-- React.js (if applicable)
-- API for fetching country data (if applicable)
-- Tailwind CSS (if applicable)
+- API for fetching country data
 
 ## 📦 Installation
 To run this project locally:
