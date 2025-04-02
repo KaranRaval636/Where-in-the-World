@@ -65,3 +65,19 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.dark-mode {
+  background: #202c37;
+  color: #ffffff;
+}
+.dark-mode .header-container {
+  background: #2b3945;
+}
+.dark-mode .country-card {
+  background: #2b3945;
+}
+.dark-mode input,
+.dark-mode select {
+  background: #2b3945;
+  color: white;
+  border-color: white;
+}

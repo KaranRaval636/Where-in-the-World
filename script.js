@@ -1,5 +1,6 @@
 let countriesContainer = document.querySelector(".countries-container");
 let searchcontainer = document.querySelector(".search-container");
+let themeChanger = document.querySelector(".theme-changer");
 let allCountries;
 fetch("https://restcountries.com/v3.1/all")
   .then((res) => {
@@ -17,7 +18,7 @@ function renderCountries(data) {
     countryCard.classList.add("country-card");
     countryCard.href = "#";
     let cardHtml = `
-                <img src="${ele.flags.svg}" alt="FLag" />
+                <img src="${ele.flags.svg}" alt="Flag" />
                 <div class="card-text">
                   <h3 class="card-title">${ele.name.common}</h3>
                   <p><strong>Population:</strong>${ele.population.toLocaleString(
@@ -37,4 +38,12 @@ searchcontainer.addEventListener("input", (e) => {
     return country.name.common.toLowerCase().includes(searchValue);
   });
   renderCountries(filterCountry);
+});
+themeChanger.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  if (document.body.classList.contains("dark-mode")) {
+    themeChanger.innerHTML = `<i class="fa-solid fa-sun"></i> Light Mode`;
+  } else {
+    themeChanger.innerHTML = `<i class="fa-solid fa-moon"></i> Dark Mode`;
+  }
 });
